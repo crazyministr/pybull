@@ -1,0 +1,44 @@
+[CLIENT]
+ipaddr                  = 192.168.100.13
+iface                   = wlan0
+
+[PATHS]
+report                  = report.html
+sudo                    = /usr/bin/sudo
+nmap                    = /usr/bin/nmap
+nikto                   = /data/pentest/scanners/nikto-2.1.4/nikto.pl
+niktoconf               = /data/pentest/scanners/nikto-2.1.4/nikto.conf
+hping3                  = /usr/sbin/hping3
+tcpreplay               = /usr/bin/tcpreplay
+urlpdf                  = http://droid-protector.com/borrar_ya/md5
+alertsfile              = /var/log/snort/alert
+
+[CREDENTIALS]
+ftpuser                 = pilou
+ftppasswd               = oops
+
+[TIMING]
+sleepbeforegetalerts    = 2
+sleepbeforenexttest     = 2
+sleepbeforetwoftp       = 2
+
+[PROXY]
+useproxy                = 0
+host                    = 192.168.100.1
+port                    = 8080
+user                    = pilou
+pass                    = oops
+
+[SERVER]
+reverseshellport        = 34567
+
+[TESTS]
+clientSideAttacks       = 1
+testRules               = 1
+badTraffic              = 1
+fragmentedPackets       = 1
+multipleFailedLogins    = 1
+evasionTechniques       = 1
+shellCodes              = 1
+denialOfService         = 1
+pcapReplay              = 1
